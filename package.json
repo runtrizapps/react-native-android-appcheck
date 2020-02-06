@@ -50,7 +50,6 @@
     "ios",
     "src",
     "dist",
-    "example",
     ".dockerignore",
     ".editorconfig",
     "tslint.json",
