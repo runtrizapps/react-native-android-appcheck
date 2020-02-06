@@ -52,6 +52,7 @@
     "dist",
     ".dockerignore",
     ".editorconfig",
+    "prettier.config.js",
     "tslint.json",
     "*.md",
     "*.podspec",
