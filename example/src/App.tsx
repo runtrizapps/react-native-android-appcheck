@@ -13,8 +13,6 @@ const App: React.FunctionComponent = () => {
       });
   }, []);
 
-  useEffect(() => testAppChecker('com.apple.android.music'), []);
-
   return (
     <View style={styles.container}>
       <Text style={{ textAlign: 'center' }}>react-native-android-appcheck example</Text>
