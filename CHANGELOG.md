@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/runtrizapps/react-native-android-appcheck/compare/v0.0.2...v0.0.3) (2020-02-06)
+
+
+### Bug Fixes
+
+* don't automatically fire `checkPackage` in example. Use buttons ([3e14c3c](https://github.com/runtrizapps/react-native-android-appcheck/commit/3e14c3cda4d5ac92dba7ced2031f18f11113cadd))
+* rm static pod path in ios example ([2117582](https://github.com/runtrizapps/react-native-android-appcheck/commit/2117582d98de895f197ea7b419123eee87010803))
+* rm swiftlint script (removed from project) ([efd7226](https://github.com/runtrizapps/react-native-android-appcheck/commit/efd72267671becd6cea2b28c3d8469f0d451fed4))
+* tslint refactor for no-jsx-lambdas ([46e6d4a](https://github.com/runtrizapps/react-native-android-appcheck/commit/46e6d4a428653e158c48f6699784cfcadb77309a))
+
 ### [0.0.2](https://github.com/runtrizapps/react-native-android-appcheck/compare/v0.0.1...v0.0.2) (2020-02-06)
 
 
