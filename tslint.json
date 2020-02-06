@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint-config-standard", "tslint-react"],
+  "extends": ["tslint:latest", "tslint-config-prettier", "tslint-react"],
   "rules": {
     "jsx-no-multiline-js": false,
     "jsx-space-before-trailing-slash": true,
