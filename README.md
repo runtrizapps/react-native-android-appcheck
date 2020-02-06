@@ -9,12 +9,22 @@
 [![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?t=1495378566925)](package.json)
 [![npm](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/react-native-android-appcheck)
 
-Yet another react-native package
+Tool to check for install status of apps on Android
+
+## Why?
+
+`Linking.canOpenURL` works well for "Deep Links" with custom schema (e.g. `exampleapp://`), however it is less useful when an app only implements "App Links" with domain verification (i.e. `android:autoVerify="true"`). [See this Android documentation page: https://developer.android.com/training/app-links/verify-site-associations#the-difference](https://developer.android.com/training/app-links/verify-site-associations#the-difference)
+
+Since a browser is capable of opening general HTTPS URLs, `Linking.canOpenURL('https://applink.exampleapp.com')` will **always return true**, whether or not "exampleapp" is installed.
+
+One real-world example of this is Apple Music on Android. On iOS, the `music://` schema can be queried for, but on Android (>= 6.0), only an "app link" is available. In this case, custom schemas are present, but the `autoVerify` attribute 'locks' the intent-filter to the https domains. Android versions lower than 6.0 are probably still able to query for the custom schemes (autoVerify implemented in 6.0/Marshmallow).
 
 ## Status
 
-- iOS & Android:
-  - ???
+- Android:
+  - Testing functionality
+- iOS:
+  - **No support planned**
 - react-native:
   - supported versions "<strong>&gt;= 0.60.5</strong>"
 
@@ -27,7 +37,6 @@ Yet another react-native package
 
 ### 0. Setup Swift and Kotlin
 
-- Open your iOS project in Xcode and create empty Swift file and bridging header to enable Swift support
 - Modify `android/build.gradle`:
 
   ```diff
@@ -47,10 +56,6 @@ Yet another react-native package
 
 `$ npm i react-native-android-appcheck -S`
 
-### 2. Install pods
-
-`$ cd ios && pod install && cd ..`
-
 </details>
 </td>
 </table>
@@ -64,12 +69,12 @@ Yet another react-native package
 ## Example
 
 ```jsx
-import * as React from 'react'
-import { View } from 'react-native'
-import {
-  CheckPackage,
-} from 'react-native-android-appcheck'
+import checkPackage from 'react-native-android-appcheck'
 
+(async function() {
+  const isInstalled = await checkPackage('com.chat.fakeapp');
+  console.log(`App is installed: ${isInstalled}`);
+}());
 ```
 
 ## Reference
@@ -82,9 +87,9 @@ import {
     <th>desc</th>
   </tr>
   <tr>
-    <td>color</td>
+    <td>packageName</td>
     <td><code>string</code></td>
-    <td><code>'red'</code></td>
-    <td>-</td>
+    <td>none</td>
+    <td>Android package name</td>
   </tr>
 </table>
