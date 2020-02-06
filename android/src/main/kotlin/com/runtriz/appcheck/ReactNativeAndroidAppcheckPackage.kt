@@ -1,11 +1,11 @@
-package runtrizapps.reactnativeandroidappcheck
+package com.runtriz.appcheck
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.uimanager.ViewManager
 
-import runtrizapps.reactnativeandroidappcheck.checkpackage.CheckPackage
+import com.runtriz.appcheck.CheckPackage
 
 class ReactNativeAndroidAppcheckPackage : ReactPackage {
   override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
