@@ -1,1 +1,4 @@
-export { Module as checkPackage } from './module'
+import NativeModule from './native-module'
+
+export const { checkPackage } = NativeModule;
+export default checkPackage;
