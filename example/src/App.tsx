@@ -4,14 +4,13 @@ import { checkPackage } from 'react-native-android-appcheck';
 
 const App: React.FunctionComponent = () => {
   const testAppChecker = useCallback(
-    (packageName) => () => {
-      checkPackage(packageName)
-        .then((isInstalled) => {
-          Alert.alert(`${packageName} installed?`, `${isInstalled}`);
-        })
-        .catch((e: Error | string | undefined) => {
-          Alert.alert('Error', e?.message || e || 'Unknown error');
-        });
+    (packageName) => async () => {
+      try {
+        const isInstalled = await checkPackage(packageName)
+        Alert.alert(`${packageName} installed?`, `${isInstalled}`);
+      } catch (e) {
+        Alert.alert('Error', e?.message || 'Unknown error');
+      }
     },
     []
   );
