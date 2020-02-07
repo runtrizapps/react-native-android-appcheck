@@ -1,6 +1,6 @@
 {
   "name": "react-native-android-appcheck",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Yet another react-native package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

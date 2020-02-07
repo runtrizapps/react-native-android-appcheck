@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/runtrizapps/react-native-android-appcheck/compare/v0.0.4...v0.0.5) (2020-02-07)
+
+
+### Bug Fixes
+
+* kotlin lint - unused import ([0a3e041](https://github.com/runtrizapps/react-native-android-appcheck/commit/0a3e04179f3dbef6c12daa342f884d6ef328de25))
+
 ### [0.0.4](https://github.com/runtrizapps/react-native-android-appcheck/compare/v0.0.3...v0.0.4) (2020-02-07)
 
 
