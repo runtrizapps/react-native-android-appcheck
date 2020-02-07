@@ -3,7 +3,6 @@
 # react-native-android-appcheck
 [![npm version](https://badge.fury.io/js/react-native-android-appcheck.svg)](https://badge.fury.io/js/react-native-android-appcheck)
 [![CircleCI](https://circleci.com/gh/runtrizapps/react-native-android-appcheck.svg?style=svg)](https://circleci.com/gh/runtrizapps/react-native-android-appcheck)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/standard/standard)
 [![Dependency Status](https://david-dm.org/runtrizapps/react-native-android-appcheck.svg)](https://david-dm.org/runtrizapps/react-native-android-appcheck)
 [![devDependencies Status](https://david-dm.org/runtrizapps/react-native-android-appcheck/dev-status.svg)](https://david-dm.org/runtrizapps/react-native-android-appcheck?type=dev)
 [![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?t=1495378566925)](package.json)
@@ -19,10 +18,10 @@ Since a browser is capable of opening general HTTPS URLs, `Linking.canOpenURL('h
 
 One real-world example of this is Apple Music on Android. On iOS, the `music://` schema can be queried for, but on Android (>= 6.0), only an "app link" is available. In this case, custom schemas are present, but the `autoVerify` attribute 'locks' the intent-filter to the https domains. Android versions lower than 6.0 are probably still able to query for the custom schemes (autoVerify implemented in 6.0/Marshmallow).
 
-## Status
+## Status: 1.0 Released
 
 - Android:
-  - Testing functionality
+  - Requires Kotlin
 - iOS:
   - **No support planned**
 - react-native:
@@ -69,27 +68,10 @@ One real-world example of this is Apple Music on Android. On iOS, the `music://`
 ## Example
 
 ```jsx
-import checkPackage from 'react-native-android-appcheck'
+import { checkPackage } from 'react-native-android-appcheck'
 
 (async function() {
   const isInstalled = await checkPackage('com.chat.fakeapp');
   console.log(`App is installed: ${isInstalled}`);
 }());
 ```
-
-## Reference
-
-<table>
-  <tr>
-    <th>prop</th>
-    <th>type</th>
-    <th>default</th>
-    <th>desc</th>
-  </tr>
-  <tr>
-    <td>packageName</td>
-    <td><code>string</code></td>
-    <td>none</td>
-    <td>Android package name</td>
-  </tr>
-</table>
