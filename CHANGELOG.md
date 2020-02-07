@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/runtrizapps/react-native-android-appcheck/compare/v0.0.3...v0.0.4) (2020-02-07)
+
+
+### Bug Fixes
+
+* lint and prevent unhandled exceptions in example app ([755d110](https://github.com/runtrizapps/react-native-android-appcheck/commit/755d11038e59a19f2a5f247b09d1e5299609e386))
+
 ### [0.0.3](https://github.com/runtrizapps/react-native-android-appcheck/compare/v0.0.2...v0.0.3) (2020-02-06)
 
 
